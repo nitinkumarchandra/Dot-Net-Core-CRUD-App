@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+<h1> @HttpContextAccessor.HttpContext.Session.GetString("Name") </h1>
+<h1> @HttpContextAccessor.HttpContext.Session.GetString("Mobile") </h1>

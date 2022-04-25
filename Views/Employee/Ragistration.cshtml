@@ -1,0 +1,68 @@
+﻿@model AdminPanelCoreNitinChandra.Models.UserModel
+
+@{
+    Layout = "~/Views/Shared/_NavAndSidebarLayout.cshtml";
+}
+
+<style>
+    .clr {
+        color: red;
+        font-weight: bold;
+    }
+
+    #log {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mx-auto" style="border: 1px solid gray; border-radius: 5px; padding: 30px; margin-top:50px;">
+            <form asp-action="Ragistration" asp-controller="Employee">
+
+                <p style="font-size: 25px; font-weight:bold;">Ragistration</p>
+                <br />
+
+                <div class="form-group">
+                    <label asp-for="Name">Enter Name:</label>
+                    <input type="text" asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="clr"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Enter Email:</label>
+                    <input type="text" asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="clr"></span>
+                </div>
+                <div>
+                    <label asp-for="Address">Enter Address:</label>
+                    <input type="text" asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="clr"></span>
+                </div>
+                <div>
+                    <label asp-for="Age">Enter Age:</label>
+                    <input type="text" asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="clr"></span>
+                </div>
+                <div>
+                    <label asp-for="Password">Enter Password:</label>
+                    <input type="text" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="clr"></span>
+                </div>
+                <br />
+                <input type="submit" value="Submit" class="btn btn-block btn-success" />
+
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<a asp-controller="Employee" asp-action="Index" class="btn btn-primary"> Go to Table View</a>
+<h1> @HttpContextAccessor.HttpContext.Session.GetString("Name") </h1>
+<h1> @HttpContextAccessor.HttpContext.Session.GetString("Mobile") </h1>
